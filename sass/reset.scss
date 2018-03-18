@@ -1,0 +1,37 @@
+html, body {
+    margin: 0px;
+    padding: 0px;
+    border: 0px;
+}
+
+h1, h2, h3, h4, h5, h6,
+p, th, td, dd, dt, blockquote, q,
+acronym, abbr, a, input, select, textarea {
+    margin: 0;
+    padding: 0;
+    font-size: inherit;
+}
+
+a, a:link, a:visited, a:active, a:hover {
+    text-decoration: none;
+    cursor: pointer;
+}
+
+img {
+    border: none;
+}
+
+
+ul, ol {
+    -webkit-padding-start: 0;
+    margin: 0;
+}
+
+ul {
+    list-style: none;
+}
+
+/** fixes for old browsers**/
+main {
+    display: block;
+}

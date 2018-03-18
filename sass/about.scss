@@ -1,0 +1,38 @@
+@import 'main';
+@import 'sections';
+
+.section-title-full-width {
+    width: 100%;
+
+    @include small {
+        border-bottom: 0;
+    }
+}
+
+.bio-image-square {
+    padding-bottom: 100%;
+}
+
+.method {
+    @include clearfix;
+}
+
+.method-icon {
+  width: 50px;
+  height: 50px;
+  float: left;
+  margin-right: 10px;
+  fill: $purple;
+}
+
+.method-content {
+    float: left;
+}
+
+.contact-method-title {
+    font-weight: $black;
+    font-size: 26px;
+
+    background-size: contain;
+    background-repeat: no-repeat;
+}

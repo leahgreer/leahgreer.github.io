@@ -1,0 +1,109 @@
+@import "mixins";
+
+// ------ Header
+header {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px $vertical-divider-spacing $section-break $vertical-divider-spacing;
+
+    @include small {
+        padding-bottom: $section-break / 2;
+    }
+}
+
+.site-title {
+    @include site-title;
+
+    a {
+        color: $pure-white;
+    }
+}
+
+.site-tagline {
+    margin-top: -5px; // magic number to bring it closer to the title
+    font-size: $body-font-size - 2px;
+}
+
+.site-title-container {
+    min-width: 210px;
+}
+
+// ------ Navigation
+nav {
+    align-self: flex-end;
+
+    @include small {
+        padding-top: $paragraph-break;
+    };
+}
+
+.nav-button {
+    @include navigation;
+    margin-left: 10px;
+
+    &:first-of-type {
+        margin-left: 0;
+    }
+}
+
+#menuToggle,
+#menuLabel {
+    display: none;
+}
+
+#menuContent {
+    display: block;
+}
+
+@include small {
+    nav {
+        position: relative; // non-static position for child elements
+        z-index: 1;
+    }
+
+    .nav-button {
+        display: block;
+        margin-left: 0;
+    }
+
+    #menuLabel {
+        display: block;
+        position: relative;
+        z-index: 1;
+        @include navigation;
+        cursor: pointer;
+    }
+
+    #menuLabel:after {
+        content: url(../images/cheveron-down.svg);
+        position: relative;
+        top: 2px;
+    }
+
+    #menuToggle:checked ~ #menuLabel:after {
+        content: url(../images/cheveron-up.svg);
+    }
+
+    #menuToggle:checked ~ #menuContent {
+        transform: none;
+        display: block;
+    }
+
+    $menu-padding: 10px;
+    $menu-label-height: 20px; // magic based on text height
+
+    #menuContent {
+        position: absolute;
+        top: 0;
+        right: -$menu-padding;
+        padding: $menu-padding;
+        padding-top: ($menu-padding * 2) + $menu-label-height;
+        transform-origin: 0% 0%;
+        transform: translate(100%, 0);
+        display: none;
+
+        text-align: right;
+        background: $charcoal;
+        border: $section-border;
+    }
+}

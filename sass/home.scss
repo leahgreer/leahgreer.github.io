@@ -1,0 +1,22 @@
+@import 'main';
+
+.homepage-content-container {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.homepage-content {
+    text-align: center;
+
+    nav {
+        padding-top: $subsection-break;
+    }
+}
+
+@include small {
+    .background-image.background-image {
+        display: block;
+    }
+};

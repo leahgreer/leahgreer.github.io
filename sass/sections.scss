@@ -1,0 +1,109 @@
+@import "mixins";
+
+.section {
+    @include grid;
+    -ms-grid-columns: 25% 75%;
+    grid-template-columns: 25% 75%;
+    padding-bottom: $section-break;
+
+    @include small {
+        -ms-grid-columns: 100%;
+        grid-template-columns: 100%;
+    };
+}
+
+.section-title {
+    @include grid-justify-self-end;
+    padding-right: $vertical-divider-spacing;
+    border-right: $section-border;
+
+    @include small {
+        @include grid-justify-self-start;
+        padding: 0 0 10px 0;
+        margin-bottom: $subsection-break - 10px;
+        border-right: 0;
+        border-bottom: $section-border;
+        width: 100%;
+    };
+
+    h2 {
+        font-weight: $black;
+        font-size: 28px;
+        font-variant: small-caps;
+    }
+}
+
+.section-content-item-header {
+    padding-bottom: $heading-break;
+}
+
+.section-content-item-title {
+    color: $green;
+    font-weight: $bold;
+    font-size: $body-font-size + 2px;
+}
+
+.section-content-item-description {
+    p,ul {
+        padding-bottom: $paragraph-break;
+    }
+
+    ul:last-of-type {
+        padding-bottom: 0;
+    }
+}
+
+.list-with-columns {
+    display: flex;
+    justify-content: space-between;
+
+    .column {
+        width: 48%;
+    }
+}
+
+// IE11 doesn't support grid gaps
+$grid-row-gap: $heading-break * 2;
+.section-content {
+    margin-left: $vertical-divider-spacing * 2;
+
+    @include small {
+        margin-left: 0;
+    }
+}
+
+.section-content-item {
+    padding-bottom: $grid-row-gap;
+
+    &:last-of-type {
+        padding-bottom: 0;
+    }
+}
+
+// IE11 needs to be told where to place grid items
+.section-content {
+    -ms-grid-column: 2;
+
+    @include small {
+        -ms-grid-column: 1;
+        -ms-grid-row: 2;
+    }
+}
+
+// Fix IE11's poor grid support
+@include supports-modern-grid {
+    .section-content {
+        display: inline-grid;
+        grid-row-gap: $grid-row-gap;
+        padding-left: $vertical-divider-spacing;
+        margin-left: 0;
+
+        @include small {
+            padding-left: 0;
+        }
+    }
+
+    .section-content-item {
+        padding-bottom: 0;
+    }
+};

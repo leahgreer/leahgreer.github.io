@@ -1,0 +1,78 @@
+@import "reset";
+@import "mixins";
+@import "header";
+
+body {
+    max-width: $body-content-width;
+    margin: 0 auto;
+    color: $white;
+    font-family: $body-font;
+    font-size: $body-font-size;
+    background-color: $charcoal;
+}
+
+header, main {
+    margin: 0 auto;
+    max-width: $main-content-width;
+}
+
+main {
+    line-height: 1.5em;
+    padding-left: $vertical-divider-spacing;
+    padding-right: $vertical-divider-spacing;
+}
+
+section {
+    font-weight: $regular;
+}
+
+a {
+    color: $green;
+    &:hover {
+        text-shadow: 0 0 4px $purple;
+    }
+}
+
+.screen-reader-header {
+    display: none;
+}
+
+ul li {
+    background: url('../images/bullet.svg') no-repeat left 5px;
+    padding-left: 30px;
+}
+
+.pipe {
+    padding: 0 5px;
+}
+
+.responsive-image {
+    height: 0;
+    position: relative;
+    overflow: hidden;
+
+    img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+    }
+}
+
+.icon {
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  stroke-width: 0;
+  fill: currentColor;
+}
+
+.background-image {
+    position: fixed;
+    bottom: 0;
+    z-index: -1;
+
+    @include small {
+        display: none;
+    };
+}

@@ -1,0 +1,11 @@
+@import 'main';
+@import 'sections';
+
+.sub-bullet {
+    margin-left: 30px;
+}
+
+.skills-header {
+    text-transform: uppercase;
+    margin-top: $paragraph-break;
+}

@@ -1,0 +1,91 @@
+// color palatte
+$charcoal: #26262D;
+$purple: #462E62;
+$green: #659b39;
+$white: #B8B8B8;
+$pure-white: #ffffff;
+
+$color-list: (charcoal, $charcoal), (purple, $purple),
+  (green, $green), (white $white), (pureWhite $pure-white);
+
+// ------ Typography
+$regular: 400;
+$bold: 700;
+$black: 900;
+
+$body-font: Chivo, Calibri, sans-serif;
+$body-font-size: 16px;
+
+$site-title-font: 'Alex Brush', Calibri, sans-serif;
+@mixin site-title {
+    font-family: $site-title-font;
+    font-weight: $regular;
+    font-size: 50px;
+    line-height: 1em;
+}
+
+@mixin reset-li {
+    background: none;
+    padding-left: 0;
+}
+
+@mixin navigation {
+    color: $green;
+    text-transform: uppercase;
+    letter-spacing: .1em;
+    font-weight: $regular;
+}
+
+// ------ Layout
+// yay magic numbers
+$body-content-width: 960px;
+$main-content-width: 700px;
+$main-sm-content-width: 600px;
+
+$vertical-divider-spacing: 20px;
+
+$section-break: 75px;
+$paragraph-break: 10px;
+$heading-break: 20px;
+$subsection-break: $heading-break * 2;
+
+$section-border: 3px solid $purple;
+
+// ------ Utilities
+@mixin clearfix {
+    &:after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+}
+
+@mixin supports-modern-grid {
+    @supports (display: grid) { @content ; }
+}
+
+// ------ Breakpoints
+@mixin small {
+    @media (max-width: 664px) { @content ; }
+}
+
+// ------ Polyfills
+@mixin grid {
+    display: -ms-grid;
+    display: grid;
+}
+
+@mixin inline-grid {
+    display: -ms-inline-grid;
+    display: inline-grid;
+}
+
+@mixin grid-justify-self-end {
+    ms-grid-column-align: end;
+    justify-self: end;
+}
+
+@mixin grid-justify-self-start {
+    ms-grid-column-align: start;
+    justify-self: start;
+}

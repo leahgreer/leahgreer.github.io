@@ -1,0 +1,33 @@
+@media print {
+    body,
+    .site-title a {
+        color: #000 !important;
+    }
+
+    nav,
+    .download-section,
+    .section-title-full-width,
+    .section-content-item-colors li:before {
+        display: none;
+    }
+
+    ul li {
+        background: none;
+        list-style-type: disc;
+        padding-left: 0;
+    }
+
+    ul {
+        -webkit-padding-start: 20px;
+    }
+
+    .section {
+        padding-bottom: 35px;
+    }
+
+    // resume
+    .section-content-item-skills li:after {
+        content: "|";
+        margin: 0 7px;
+    }
+}

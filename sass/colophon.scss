@@ -1,0 +1,77 @@
+@import 'main';
+@import 'sections';
+
+.dictionary-definition {
+    ol {
+        margin-left: $vertical-divider-spacing;
+    }
+
+    li {
+        -webkit-margin-after: $paragraph-break;
+        -webkit-padding-start: 5px; // just some breathing room
+    }
+
+    p {
+        text-align: right;
+        margin-bottom: -30px; // because of text-align the spacing looks too large
+        font-size: $body-font-size - 4px;
+    }
+}
+
+.site-title-example {
+    font-family: $site-title-font;
+    font-size: $body-font-size * 1.5;
+}
+
+.icon-heart {
+    width: 12px;
+    height: 12px;
+}
+
+@mixin monospace {
+    font-family: "Courier New", Courier, monospace;;
+    font-size: $body-font-size - 2px;
+}
+
+.monospace {
+    @include monospace;
+}
+
+// ------ Color Palette
+
+.section-content-item-colors {
+    text-align: center;
+    list-style: none;
+
+    li {
+        @include reset-li;
+        display: inline-block;
+        padding: 5px;
+        @include monospace;
+    }
+
+    $color-block-size: 35px;
+    li:before {
+        content: "";
+        display: block;
+        height: $color-block-size;
+        width: $color-block-size;
+        margin: 0 auto 5px auto;
+    }
+
+    @each $selector, $hex in $color-list {
+        ##{$selector}:before {
+            background-color: $hex;
+        }
+
+        ##{$selector}:after {
+            content: "#{$hex}";
+        }
+    }
+
+    #charcoal:before {
+        height: $color-block-size - 2px;
+        width: $color-block-size - 2px;
+        border: 1px solid black;
+    }
+}

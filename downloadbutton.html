@@ -1,0 +1,52 @@
+<svg aria-hidden="true" style="position: absolute; width: 0; height: 0; overflow: hidden;" version="1.1"
+    xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <defs>
+        <symbol id="icon-download" viewBox="0 0 16 16">
+            <title>download</title>
+            <path d="M11.5 7l-4 4-4-4h2.5v-6h3v6zM7.5 11h-7.5v4h15v-4h-7.5zM14 13h-2v-1h2v1z"></path>
+        </symbol>
+    </defs>
+</svg>
+
+<section class="section download-section">
+    <div></div>
+    <div class="section-content">
+        <div class="section-content-item">
+            <a href="" class="download-resume">
+                <svg class="icon icon-download"><use xlink:href="#icon-download"></use></svg>
+                Download Resume
+            </a>
+        </div>
+    </div>
+</section>
+
+
+
+.download-resume {
+    padding: 10px;
+    background-color: $purple;
+    color: $pure-white;
+    text-transform: uppercase;
+    letter-spacing: .1em;
+    margin-bottom: 20px;
+
+    &:hover {
+        text-shadow: none;
+        box-shadow: 2px, 3px, 4px, rgba(0, 0, 0, 0.40);
+    }
+
+    .icon-download {
+        position: relative;
+        top: 2px;
+    }
+}
+
+
+
+<div class="section-content-item method">
+    <svg class="icon method-icon icon-mail"><use xlink:href="#icon-mail"></use></svg>
+    <div class="method-content">
+        <h2 class="contact-method-title contact-method-email">Email</h2>
+        <p><a href="mailto:greer.leah@gmail.com">greer.leah@gmail.com</a></p>
+    </div>
+</div>
