@@ -3,7 +3,7 @@
 {% endcapture %}
 
 {% capture cssPath %}
-{{ "/assets/css/fileName.css" | replace: "fileName", {{page.css}} }}
+"/assets/css/{{page.css}}.css"
 {% endcapture %}
 
 <!doctype html>

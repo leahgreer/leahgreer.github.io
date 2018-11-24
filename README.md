@@ -1,2 +1,1 @@
-Code for: http://leahgreer.com/index.html
-#website
+Code for: http://leahgreer.com/

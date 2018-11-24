@@ -5,8 +5,12 @@ $green: #659b39;
 $white: #B8B8B8;
 $pure-white: #ffffff;
 
-$color-list: (charcoal, $charcoal), (purple, $purple),
-  (green, $green), (white $white), (pureWhite $pure-white);
+$color-list:
+    (colorCharcoal, $charcoal),
+    (colorPurple, $purple),
+    (colorGreen, $green),
+    (colorWhite $white),
+    (colorPureWhite $pure-white);
 
 // ------ Typography
 $regular: 400;
