@@ -1,228 +1,171 @@
-﻿<!doctype html>
-<!-- HTML5 -->
+---
+layout: default
+css: resume
+title: Resume
+description: This is her resume.
+---
 
-<html lang="en">
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="x-ua-compatible" content="ie=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+{% include header.html %}
 
-        <title>Leah Greer: Resume</title>
-        <meta name="description" content="Leah Greer is a web developer and crazy cat lady. This is her resume.">
-        <meta name="author" content="Leah Greer">
+<main role="main">
+    <section class="section">
+        <div class="section-title">
+            <h2>Experience</h2>
+        </div>
+        <div class="section-content">
+            <div class="section-content-item">
+                <div class="section-content-item-header">
+                    <h3 class="section-content-item-title">Senior Software Engineer</h3>
+                    <p>Vistaprint <span class="pipe">|</span> Waltham, MA</p>
+                    <p>June 2013 – present</p>
+                </div>
 
-        <!-- Favicons -->
-        <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
-        <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
-        <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
-        <meta name="theme-color" content="#462e62">
+                <div class="section-content-item-description">
+                    <ul>
+                        <li>Promoted from Software Engineer to Senior Software Engineer July 2014.</li>
+                        <li>Developed C# MVC page templates to merchandise products across 20+ localized websites,
+                            including high visibility pages such as the homepage and product pages for the holiday season.</li>
+                        <li>Front-end developer for a product configurator using Backbone. Later was a primary developer
+                            in its redesign with JavaScript and jQuery to simplify the code and increase extensibility.</li>
+                        <li>Formed a rapid prototyping squad to research and perform customer testing around site navigation.
+                            Later lead the development for production with Sitecore, SASS, JavaScript and jQuery.</li>
+                        <li>Developed and maintained JavaScript unit and integration tests with Mocha, Chai, and Sinon.JS.</li>
+                        <li>Took initiative to create standards for SCSS files and integrated a linter into the build system.</li>
+                        <li>Part of the team that developed the first page to be delivered on the Sitecore platform.</li>
+                        <li>Before Sitecore, was the primary support for WPF in-house CMS-like tools used by marketers to
+                            create the pages and navigation links.</li>
+                        <li>Lead discussions around team development standards, cultural norms and component ownership.</li>
+                        <li>Work within agile teams, frequently stepping in to lead standups and retrospectives.</li>
+                    </ul>
+                </div>
 
-        <!-- Google / Search Engine Tags -->
-        <meta itemprop="name" content="Leah Greer: Resume">
-        <meta itemprop="description" content="Leah Greer is a web developer and crazy cat lady. This is her resume.">
-        <meta itemprop="image" content="http://leahgreer.com/images/leah.jpg">
+                <p class="skills-header">Skills:</p>
+                <div class="list-with-columns">
+                    <ul class="column">
+                        <li>HTML5</li>
+                        <li>CSS3, SASS, LESS</li>
+                        <li>JavaScript</li>
+                        <li class="sub-bullet">jQuery</li>
+                        <li class="sub-bullet">Backbone</li>
+                        <li class="sub-bullet">Handlebars</li>
+                        <li class="sub-bullet">React</li>
+                        <li class="sub-bullet">Mocha, Chai, Sinon.JS</li>
+                        <li>Responsive design</li>
+                    </ul>
 
-        <!-- Facebook Meta Tags -->
-        <meta property="og:url" content="http://leahgreer.com">
-        <meta property="og:type" content="website">
-        <meta property="og:title" content="Leah Greer: Resume">
-        <meta property="og:description" content="Leah Greer is a web developer and crazy cat lady. This is her resume.">
-        <meta property="og:image" content="http://leahgreer.com/images/leah.jpg">
-
-        <!-- Twitter Meta Tags -->
-        <meta name="twitter:card" content="summary_large_image">
-        <meta name="twitter:title" content="Leah Greer: Resume">
-        <meta name="twitter:description" content="Leah Greer is a web developer and crazy cat lady. This is her resume.">
-        <meta name="twitter:image" content="http://leahgreer.com/images/leah.jpg">
-
-        <!-- Content -->
-        <link rel="stylesheet" href="css/resume.css">
-        <link rel="stylesheet" href="css/print.css" media="print"/>
-        <link href="https://fonts.googleapis.com/css?family=Chivo:400,700,900|Alex+Brush" rel="stylesheet">
-    </head>
-
-    <body>
-        <header>
-            <div class="site-title-container">
-                <h1 class="site-title">
-                    <a href="index.html">Leah Greer</a>
-                </h1>
-                <p class="site-tagline">Web Developer. Crazy Cat Lady.</p>
+                    <ul class="column">
+                        <li>C#</li>
+                        <li>ASP.NET MVC</li>
+                        <li>Sitecore</li>
+                        <li>mySQL</li>
+                        <li>Git, Subversion</li>
+                        <li>Agile methodologies</li>
+                    </ul>
+                </div>
             </div>
-            <nav role="navigation">
-                <input type="checkbox" id="menuToggle">
-                <label id="menuLabel" for="menuToggle">Menu</label>
-                <div id="menuContent">
-                    <a class="nav-button" href="resume.html">Resume</a>
-                    <a class="nav-button" href="about.html" aria-label="About Leah">About</a>
-                    <a class="nav-button" href="about.html#contact">Contact</a>
-                    <a class="nav-button" href="colophon.html">Colophon</a>
-                </div>
-            </nav>
-        </header>
 
-        <main role="main">
-            <section class="section">
-                <div class="section-title">
-                    <h2>Experience</h2>
-                </div>
-                <div class="section-content">
-                    <div class="section-content-item">
-                        <div class="section-content-item-header">
-                            <h3 class="section-content-item-title">Senior Software Engineer</h3>
-                            <p>Vistaprint <span class="pipe">|</span> Waltham, MA</p>
-                            <p>June 2013 – present</p>
-                        </div>
-
-                        <div class="section-content-item-description">
-                            <ul>
-                                <li>Promoted from Software Engineer to Senior Software Engineer July 2014.</li>
-                                <li>Developed C# MVC page templates to merchandise products across 20+ localized websites,
-                                    including high visibility pages such as the homepage and product pages for the holiday season.</li>
-                                <li>Front-end developer for a product configurator using Backbone. Later was a primary developer
-                                    in its redesign with JavaScript and jQuery to simplify the code and increase extensibility.</li>
-                                <li>Formed a rapid prototyping squad to research and perform customer testing around site navigation.
-                                    Later lead the development for production with Sitecore, SASS, JavaScript and jQuery.</li>
-                                <li>Developed and maintained JavaScript unit and integration tests with Mocha, Chai, and Sinon.JS.</li>
-                                <li>Took initiative to create standards for SCSS files and integrated a linter into the build system.</li>
-                                <li>Part of the team that developed the first page to be delivered on the Sitecore platform.</li>
-                                <li>Before Sitecore, was the primary support for WPF in-house CMS-like tools used by marketers to
-                                    create the pages and navigation links.</li>
-                                <li>Lead discussions around team development standards, cultural norms and component ownership.</li>
-                                <li>Work within agile teams, frequently stepping in to lead standups and retrospectives.</li>
-                            </ul>
-                        </div>
-
-                        <p class="skills-header">Skills:</p>
-                        <div class="list-with-columns">
-                            <ul class="column">
-                                <li>HTML5</li>
-                                <li>CSS3, SASS, LESS</li>
-                                <li>JavaScript</li>
-                                <li class="sub-bullet">jQuery</li>
-                                <li class="sub-bullet">Backbone</li>
-                                <li class="sub-bullet">Handlebars</li>
-                                <li class="sub-bullet">React</li>
-                                <li class="sub-bullet">Mocha, Chai, Sinon.JS</li>
-                                <li>Responsive design</li>
-                            </ul>
-
-                            <ul class="column">
-                                <li>C#</li>
-                                <li>ASP.NET MVC</li>
-                                <li>Sitecore</li>
-                                <li>mySQL</li>
-                                <li>Git, Subversion</li>
-                                <li>Agile methodologies</li>
-                            </ul>
-                        </div>
-                    </div>
-
-                    <div class="section-content-item">
-                        <div class="section-content-item-header">
-                            <h3 class="section-content-item-title">Software Engineer Intern</h3>
-                            <p>Vistaprint <span class="pipe">|</span> Waltham, MA</p>
-                            <p>May 2012 – August 2012</p>
-                        </div>
-
-                        <p class="section-content-item-description">
-                            Designed and programmed an internal tool to decrease friction when filling out timesheets.
-                        </p>
-
-                        <p class="skills-header">Skills:</p>
-                        <ul>
-                            <li>C#</li>
-                            <li>ASP.NET MVC</li>
-                            <li>CSS</li>
-                            <li>Balsamiq</li>
-                        </ul>
-                    </div>
-
-                    <div class="section-content-item">
-                        <div class="section-content-item-header">
-                            <h3 class="section-content-item-title">Library Web Content Aggregator</h3>
-                            <p>WPI Gordon Library <span class="pipe">|</span> Worcester, MA</p>
-                            <p>August 2009 – May 2013</p>
-                        </div>
-
-                        <ul class="section-content-item-description">
-                            <li>Maintained the library's online presence including the website, blog, and social media sites.</li>
-                            <li>Participated in discussions regarding best practices of the website maintenance.</li>
-                        </ul>
-
-                        <p class="skills-header">Skills:</p>
-                        <ul>
-                            <li>HTML</li>
-                            <li>CSS</li>
-                            <li>RedDot CMS</li>
-                        </ul>
-                    </div>
+            <div class="section-content-item">
+                <div class="section-content-item-header">
+                    <h3 class="section-content-item-title">Software Engineer Intern</h3>
+                    <p>Vistaprint <span class="pipe">|</span> Waltham, MA</p>
+                    <p>May 2012 – August 2012</p>
                 </div>
 
-            </section>
+                <p class="section-content-item-description">
+                    Designed and programmed an internal tool to decrease friction when filling out timesheets.
+                </p>
 
-            <section class="section">
-                <div class="section-title">
-                    <h2>Education</h2>
+                <p class="skills-header">Skills:</p>
+                <ul>
+                    <li>C#</li>
+                    <li>ASP.NET MVC</li>
+                    <li>CSS</li>
+                    <li>Balsamiq</li>
+                </ul>
+            </div>
+
+            <div class="section-content-item">
+                <div class="section-content-item-header">
+                    <h3 class="section-content-item-title">Library Web Content Aggregator</h3>
+                    <p>WPI Gordon Library <span class="pipe">|</span> Worcester, MA</p>
+                    <p>August 2009 – May 2013</p>
                 </div>
-                <div class="section-content">
-                    <div class="section-content-item">
-                        <div class="section-content-item-header">
-                            <h3 class="section-content-item-title">Bachelor of Science in Computer Science</h3>
-                            <p>Worcester Polytechnic Institute <span class="pipe">|</span> Worcester, MA</p>
-                            <p>Graduated May 2013</p>
-                        </div>
 
-                        <ul class="section-content-item-description">
-                            <li>Graduated with High Distinction, GPA 3.8</li>
-                            <li>Received the computer science department’s Major Qualifying Project Award.
-                                My group developed a web application for hygiene reminders in hospital ICUs.</li>
-                            <li>Member of: Upsilon Pi Epislon, Women in Computer Science, and the pep band</li>
-                        </ul>
-                    </div>
+                <ul class="section-content-item-description">
+                    <li>Maintained the library's online presence including the website, blog, and social media sites.</li>
+                    <li>Participated in discussions regarding best practices of the website maintenance.</li>
+                </ul>
 
-                    <div class="section-content-item">
-                        <div class="section-content-item-header">
-                            <h3 class="section-content-item-title">Sitecore 8.0 Certified Professional Developer</h3>
-                            <p>July 2015</p>
-                        </div>
+                <p class="skills-header">Skills:</p>
+                <ul>
+                    <li>HTML</li>
+                    <li>CSS</li>
+                    <li>RedDot CMS</li>
+                </ul>
+            </div>
+        </div>
 
-                        <p class="section-content-item-description">
-                            This credential demonstrates skills in Sitecore technology and
-                            recommended practices and provides access to the Sitecore Developer Network.
-                        </p>
-                    </div>
+    </section>
+
+    <section class="section">
+        <div class="section-title">
+            <h2>Education</h2>
+        </div>
+        <div class="section-content">
+            <div class="section-content-item">
+                <div class="section-content-item-header">
+                    <h3 class="section-content-item-title">Bachelor of Science in Computer Science</h3>
+                    <p>Worcester Polytechnic Institute <span class="pipe">|</span> Worcester, MA</p>
+                    <p>Graduated May 2013</p>
                 </div>
-            </section>
 
-            <section class="section">
-                <div class="section-title">
-                    <h2>Volunteer</h2>
+                <ul class="section-content-item-description">
+                    <li>Graduated with High Distinction, GPA 3.8</li>
+                    <li>Received the computer science department’s Major Qualifying Project Award.
+                        My group developed a web application for hygiene reminders in hospital ICUs.</li>
+                    <li>Member of: Upsilon Pi Epislon, Women in Computer Science, and the pep band</li>
+                </ul>
+            </div>
+
+            <div class="section-content-item">
+                <div class="section-content-item-header">
+                    <h3 class="section-content-item-title">Sitecore 8.0 Certified Professional Developer</h3>
+                    <p>July 2015</p>
                 </div>
-                <div class="section-content">
-                    <div class="section-content-item">
-                        <div class="section-content-item-header">
-                            <h3 class="section-content-item-title">Animal Shelter Volunteer</h3>
-                            <p>The Cat Connection <span class="pipe">|</span> Waltham, MA</p>
-                            <p>May 2016 – February 2018</p>
-                        </div>
 
-                        <p class="section-content-item-description">
-                            Gave cats without homes the love and attention they need. This included showering attention on the
-                            friendly ones who are ready for homes, and working with the cats who needed help learning to trust humans.
-                        </p>
+                <p class="section-content-item-description">
+                    This credential demonstrates skills in Sitecore technology and
+                    recommended practices and provides access to the Sitecore Developer Network.
+                </p>
+            </div>
+        </div>
+    </section>
 
-                        <p class="skills-header">Skills:</p>
-                        <ul>
-                            <li>Petting many cats with only two hands</li>
-                            <li>Pull top can opening</li>
-                            <li>Wand waving</li>
-                            <li>Litter scooping</li>
-                        </ul>
-                    </div>
+    <section class="section">
+        <div class="section-title">
+            <h2>Volunteer</h2>
+        </div>
+        <div class="section-content">
+            <div class="section-content-item">
+                <div class="section-content-item-header">
+                    <h3 class="section-content-item-title">Animal Shelter Volunteer</h3>
+                    <p>The Cat Connection <span class="pipe">|</span> Waltham, MA</p>
+                    <p>May 2016 – February 2018</p>
                 </div>
-            </section>
-        </main>
-        <img src="images/paws.svg" class="background-image" alt=""/>
-    </body>
-</html>
+
+                <p class="section-content-item-description">
+                    Gave cats without homes the love and attention they need. This included showering attention on the
+                    friendly ones who are ready for homes, and working with the cats who needed help learning to trust humans.
+                </p>
+
+                <p class="skills-header">Skills:</p>
+                <ul>
+                    <li>Petting many cats with only two hands</li>
+                    <li>Pull top can opening</li>
+                    <li>Wand waving</li>
+                    <li>Litter scooping</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+</main>

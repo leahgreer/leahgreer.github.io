@@ -1,0 +1,62 @@
+{% capture siteDescription %}
+{{site.data.common.description}} {{ page.description }}
+{% endcapture %}
+
+{% capture cssPath %}
+{{ "/assets/css/fileName.css" | replace: "fileName", {{page.css}} }}
+{% endcapture %}
+
+<!doctype html>
+<!-- HTML5 -->
+
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+        <title>
+            {%if page.title %}
+            {{site.title}}: {{page.title}}
+            {% else %}
+            {{site.title}}
+            {% endif %}
+        </title>
+        <meta name="description" content={{siteDescription}}>
+        <meta name="author" content="Leah Greer">
+
+        <!-- Favicons -->
+        <link rel="apple-touch-icon" sizes="180x180" href="/assets/images/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="/assets/images/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/assets/images/favicon-16x16.png">
+        <meta name="theme-color" content="#462e62">
+
+        <!-- Google / Search Engine Tags -->
+        <meta itemprop="name" content="Leah Greer">
+        <meta itemprop="description" content={{siteDescription}}>
+        <meta itemprop="image" content="/assets/images/leah.jpg">
+
+        <!-- Facebook Meta Tags -->
+        <meta property="og:url" content="http://leahgreer.com">
+        <meta property="og:type" content="website">
+        <meta property="og:title" content="Leah Greer">
+        <meta property="og:description" content={{siteDescription}}>
+        <meta property="og:image" content="/assets/images/leah.jpg">
+
+        <!-- Twitter Meta Tags -->
+        <meta name="twitter:card" content="summary_large_image">
+        <meta name="twitter:title" content="Leah Greer">
+        <meta name="twitter:description" content={{siteDescription}}>
+        <meta name="twitter:image" content="/assets/images/leah.jpg">
+
+        <!-- Content -->
+        <link rel="stylesheet" href={{cssPath}}>
+        <link rel="stylesheet" href="/assets/css/print.css" media="print"/>
+        <link href="https://fonts.googleapis.com/css?family=Chivo:400,700,900|Alex+Brush" rel="stylesheet">
+    </head>
+
+    <body>
+        {{ content }}
+        <img src="/assets/images/paws.svg" class="background-image" alt=""/>
+    </body>
+</html>

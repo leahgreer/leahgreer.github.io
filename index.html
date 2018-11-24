@@ -1,60 +1,17 @@
-<!doctype html>
-<!-- HTML5 -->
+---
+layout: default
+css: home
+description: This is her personal website.
 
-<html lang="en">
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="x-ua-compatible" content="ie=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+---
 
-        <title>Leah Greer</title>
-        <meta name="description" content="Leah Greer is a web developer and crazy cat lady. This is her personal website.">
-        <meta name="author" content="Leah Greer">
+<main class="homepage-content-container" role="main">
+    <div class="homepage-content">
+        <h1 class="site-title"><a href="/">{{site.data.common.title}}</a></h1>
+        <p class="site-tagline">{{site.data.common.tagline}}</p>
 
-        <!-- Favicons -->
-        <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
-        <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
-        <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
-        <meta name="theme-color" content="#462e62">
-
-        <!-- Google / Search Engine Tags -->
-        <meta itemprop="name" content="Leah Greer">
-        <meta itemprop="description" content="Leah Greer is a web developer and crazy cat lady. This is her personal website.">
-        <meta itemprop="image" content="http://leahgreer.com/images/leah.jpg">
-
-        <!-- Facebook Meta Tags -->
-        <meta property="og:url" content="http://leahgreer.com">
-        <meta property="og:type" content="website">
-        <meta property="og:title" content="Leah Greer">
-        <meta property="og:description" content="Leah Greer is a web developer and crazy cat lady. This is her personal website.">
-        <meta property="og:image" content="http://leahgreer.com/images/leah.jpg">
-
-        <!-- Twitter Meta Tags -->
-        <meta name="twitter:card" content="summary_large_image">
-        <meta name="twitter:title" content="Leah Greer">
-        <meta name="twitter:description" content="Leah Greer is a web developer and crazy cat lady. This is her personal website.">
-        <meta name="twitter:image" content="http://leahgreer.com/images/leah.jpg">
-
-        <!-- Content -->
-        <link rel="stylesheet" href="css/home.css">
-        <link rel="stylesheet" href="css/print.css" media="print"/>
-        <link href="https://fonts.googleapis.com/css?family=Chivo:400,700,900|Alex+Brush" rel="stylesheet">
-    </head>
-
-    <body class="homepage">
-        <main class="homepage-content-container" role="main">
-            <div class="homepage-content">
-                <h1 class="site-title"><a href="index.html">Leah Greer</a></h1>
-                <p class="site-tagline">Web Developer. Crazy Cat Lady.</p>
-
-                <nav role="navigation">
-                    <a class="nav-button" href="resume.html">Resume</a>
-                    <a class="nav-button" href="about.html" aria-label="About Leah">About</a>
-                    <a class="nav-button" href="about.html#contact">Contact</a>
-                    <a class="nav-button" href="colophon.html">Colophon</a>
-                </nav>
-            </div>
-        </main>
-        <img src="images/paws.svg" class="background-image" alt=""/>
-    </body>
-</html>
+        <nav role="navigation">
+            {% include navigation.html %}
+        </nav>
+    </div>
+</main>
